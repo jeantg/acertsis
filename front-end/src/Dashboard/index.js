@@ -5,6 +5,10 @@ export default function Dashboard({ history }) {
   if (!sessionStorage.getItem("id")) history.push("/login");
   const [name, setName] = React.useState(sessionStorage.getItem("name"));
   const [data, setData] = React.useState(null);
+  function logout() {
+    sessionStorage.clear();
+    history.push("/");
+  }
   useEffect(() => {
     async function get() {
       //Recupera a sessão do usuário
@@ -16,7 +20,6 @@ export default function Dashboard({ history }) {
           }
         })
         .then(function(response) {
-          console.log(response.data);
           setData(response.data);
         })
         .catch(function(err) {});
@@ -36,6 +39,9 @@ export default function Dashboard({ history }) {
           <p>*Com base no seu histórico de compras</p>
         </div>
       )}
+      <button onClick={logout} className="logout">
+        Sair
+      </button>
     </div>
   );
 }

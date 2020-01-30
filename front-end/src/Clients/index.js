@@ -21,7 +21,6 @@ export default function Main({ history }) {
       await api
         .get("/maxshop/", {})
         .then(function(response) {
-          console.log(response.data)
           setShop(response.data);
         })
         .catch(function(err) {});
@@ -34,7 +33,6 @@ export default function Main({ history }) {
         .get(`/main/${currentPage - 1}`, {})
         .then(function(response) {
           setTotal(parseInt(response.data.total));
-          console.log(response.data.clientes)
           setClients(response.data.clientes);
         })
         .catch(function(err) {});
@@ -47,7 +45,6 @@ export default function Main({ history }) {
         .get(`/2018/${currentPage2 - 1}`, {})
         .then(function(response) {
           setClients2(response.data.clientes);
-          console.log(response.data.clientes)
           setTotal2(parseInt(response.data.total));
         })
         .catch(function(err) {});
@@ -59,6 +56,12 @@ export default function Main({ history }) {
   return (
     //React Fragment: Para conter elementos não aninhados por um elemento pai
     <React.Fragment>
+      <h2 id="title">Site</h2>
+      <div className="header-form">
+        <button onClick={() => history.push("/login")} className="bt2">
+          Login
+        </button>
+      </div>
       <p>Lista de Clientes</p>
       {/*Componente para exibir a tabela de clientes*/}
       <Clients data={clients} />

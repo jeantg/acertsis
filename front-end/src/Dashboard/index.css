@@ -12,6 +12,19 @@ h3{
 }
 .dashboard p{
     font-size: 15px;
+    margin:  5px;
     float: left;
-    margin:  5px
+}
+.logout{
+    border: 0;
+    border-radius: 2px;
+    max-width: 100px;
+    height: 20px;
+    padding: 0 20px;
+    font-size: 15px;
+    font-weight: bold;
+    background: #4c90af;
+    color: #fff;
+    cursor: pointer;
+    margin: 10px;
 }

@@ -1,12 +1,12 @@
 import React from "react";
 const Pagination = ({ clientsPerPage, totalClients, paginate, active }) => {
-  console.log(totalClients);
   const Numbers = [];
   for (let i = 1; i <= Math.ceil(totalClients / clientsPerPage); i++) {
     Numbers.push(i);
   }
   return (
-    <div className="pagination">
+    <div className="pagination-container">
+<div className="pagination">
       {Numbers.map(number => (
         <span
           key={number}
@@ -17,6 +17,9 @@ const Pagination = ({ clientsPerPage, totalClients, paginate, active }) => {
         </span>
       ))}
     </div>
+
+    </div>
+    
   );
 };
 export default Pagination;
