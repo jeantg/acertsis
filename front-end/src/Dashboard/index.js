@@ -35,7 +35,7 @@ export default function Dashboard({ history }) {
           <h3>
             {data.produto} {data.marca}
           </h3>
-          <h3>Por apenas R$ {data.preco},00</h3>
+          <h3>Por apenas R$ {data.preco}</h3>
           <p>*Com base no seu histórico de compras</p>
         </div>
       )}
