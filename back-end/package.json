@@ -1,0 +1,19 @@
+{
+  "name": "acertsis",
+  "version": "1.0.0",
+  "description": "Acertsis Challenge Project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Jean",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "helmet": "^3.21.0",
+    "install": "^0.13.0",
+    "pg": "^7.17.1"
+  }
+}
